@@ -1,0 +1,214 @@
+
+   .------------------------------------.
+   |                                    |
+   |   | |/ /  _ _ _ ___ _ _| |_ ___    |
+   |   | ' < || | '_/ -_) ' \  _/ _ \   |
+   |   |_|\_\_,_|_| \___|_||_\__\___/   |
+   |                                    |
+   '------------------------------------'
+       Kurento Java Tutorial 2 - Magic Mirror
+       Version 6.1.1-SNAPSHOT
+
+09:53:43.046 [                main] INFO  - o.k.tutorial.magicmirror.MagicMirrorApp  - Starting MagicMirrorApp v6.1.1-SNAPSHOT on 541af587c439 with PID 6 (/tmp/magic-mirror/lib/kurento-magic-mirror.jar started by root in /)
+09:53:43.050 [                main] DEBUG - o.k.tutorial.magicmirror.MagicMirrorApp  - Running with Spring Boot v1.2.5.RELEASE, Spring v4.2.1.RELEASE
+09:53:44.634 [                main] INFO  - o.h.validator.internal.util.Version      - HV000001: Hibernate Validator 5.1.3.Final
+09:54:03.431 [                main] INFO  - d.f.f.nubomedia.paas.VNFRServiceProfile  - Instatiating the VNFR service profile with ff System Properties;
+ VNFM_IP: null
+VNFM_PORT: null
+null
+09:54:03.488 [                main] INFO  - d.f.f.nubomedia.paas.VNFRServiceImpl     - registering new application: 
+URL: http://80.96.122.80:9000/vnfr/a7a7638b-5963-40f2-b9a2-2fc6e8c0dbc7/app
+ + {"points":50,"extAppId":"cf3848c6-ca20-4f4f-b9a5-623e627c87a5"}
+09:54:03.719 [                main] ERROR - d.f.f.nubomedia.paas.VNFRServiceImpl     - Error registering application to VNFR - 422 Unprocessable Entity
+09:54:03.735 [                main] WARN  - ationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webSocketHandlerMapping' defined in class org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'webSocketHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handler': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.kurento.client.KurentoClient org.kurento.tutorial.magicmirror.MagicMirrorHandler.kurento; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kurentoClient' defined in org.kurento.tutorial.magicmirror.MagicMirrorApp: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834) ~[spring-context-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.2.5.RELEASE.jar!/:1.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) [spring-boot-1.2.5.RELEASE.jar!/:1.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.2.5.RELEASE.jar!/:1.2.5.RELEASE]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp.main(MagicMirrorApp.java:57) [kurento-magic-mirror.jar!/:6.1.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_66-internal]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_66-internal]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_66-internal]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_66-internal]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:53) [kurento-magic-mirror.jar!/:6.1.1-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_66-internal]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'webSocketHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handler': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.kurento.client.KurentoClient org.kurento.tutorial.magicmirror.MagicMirrorHandler.kurento; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kurentoClient' defined in org.kurento.tutorial.magicmirror.MagicMirrorApp: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handler': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.kurento.client.KurentoClient org.kurento.tutorial.magicmirror.MagicMirrorHandler.kurento; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kurentoClient' defined in org.kurento.tutorial.magicmirror.MagicMirrorApp: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp$$EnhancerBySpringCGLIB$$7ed479ca.handler(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp.registerWebSocketHandlers(MagicMirrorApp.java:53) [kurento-magic-mirror.jar!/:6.1.1-SNAPSHOT]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration.registerWebSocketHandlers(DelegatingWebSocketConfiguration.java:51) ~[spring-websocket-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.web.socket.config.annotation.WebSocketConfigurationSupport.webSocketHandlerMapping(WebSocketConfigurationSupport.java:34) ~[spring-websocket-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration$$EnhancerBySpringCGLIB$$1d6a7f0d.CGLIB$webSocketHandlerMapping$2(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration$$EnhancerBySpringCGLIB$$1d6a7f0d$$FastClassBySpringCGLIB$$d69cc89c.invoke(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:318) ~[spring-context-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration$$EnhancerBySpringCGLIB$$1d6a7f0d.webSocketHandlerMapping(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_66-internal]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_66-internal]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_66-internal]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_66-internal]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.kurento.client.KurentoClient org.kurento.tutorial.magicmirror.MagicMirrorHandler.kurento; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kurentoClient' defined in org.kurento.tutorial.magicmirror.MagicMirrorApp: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:571) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 44 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kurentoClient' defined in org.kurento.tutorial.magicmirror.MagicMirrorApp: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1145) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1069) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:543) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 46 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 58 common frames omitted
+Caused by: org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at de.fhg.fokus.nubomedia.kmc.KmsUrlProvider.reserveKms(KmsUrlProvider.java:52) ~[kurento-client-extended-1.0-SNAPSHOT.jar!/:1.0-SNAPSHOT]
+	at org.kurento.client.internal.KmsUrlLoader.loadKmsUrlFromProvider(KmsUrlLoader.java:39) ~[kurento-client-6.1.1-SNAPSHOT.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.client.internal.KmsUrlLoader.getKmsUrl(KmsUrlLoader.java:20) ~[kurento-client-6.1.1-SNAPSHOT.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.client.KurentoClient.getKmsUrl(KurentoClient.java:72) ~[kurento-client-6.1.1-SNAPSHOT.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.client.KurentoClient.create(KurentoClient.java:90) ~[kurento-client-6.1.1-SNAPSHOT.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.client.KurentoClient.create(KurentoClient.java:85) ~[kurento-client-6.1.1-SNAPSHOT.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp.kurentoClient(MagicMirrorApp.java:48) [kurento-magic-mirror.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp$$EnhancerBySpringCGLIB$$7ed479ca.CGLIB$kurentoClient$0(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp$$EnhancerBySpringCGLIB$$7ed479ca$$FastClassBySpringCGLIB$$b50f311c.invoke(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:6.1.1-SNAPSHOT]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:318) ~[spring-context-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp$$EnhancerBySpringCGLIB$$7ed479ca.kurentoClient(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:6.1.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_66-internal]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_66-internal]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_66-internal]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_66-internal]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 59 common frames omitted
+09:54:03.772 [                main] ERROR - o.s.boot.SpringApplication               - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webSocketHandlerMapping' defined in class org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'webSocketHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handler': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.kurento.client.KurentoClient org.kurento.tutorial.magicmirror.MagicMirrorHandler.kurento; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kurentoClient' defined in org.kurento.tutorial.magicmirror.MagicMirrorApp: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834) ~[spring-context-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537) ~[spring-context-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) ~[spring-boot-1.2.5.RELEASE.jar!/:1.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:686) ~[spring-boot-1.2.5.RELEASE.jar!/:1.2.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) ~[spring-boot-1.2.5.RELEASE.jar!/:1.2.5.RELEASE]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp.main(MagicMirrorApp.java:57) [kurento-magic-mirror.jar!/:6.1.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_66-internal]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_66-internal]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_66-internal]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_66-internal]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:53) [kurento-magic-mirror.jar!/:6.1.1-SNAPSHOT]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_66-internal]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'webSocketHandlerMapping' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handler': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.kurento.client.KurentoClient org.kurento.tutorial.magicmirror.MagicMirrorHandler.kurento; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kurentoClient' defined in org.kurento.tutorial.magicmirror.MagicMirrorApp: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handler': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.kurento.client.KurentoClient org.kurento.tutorial.magicmirror.MagicMirrorHandler.kurento; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kurentoClient' defined in org.kurento.tutorial.magicmirror.MagicMirrorApp: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp$$EnhancerBySpringCGLIB$$7ed479ca.handler(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp.registerWebSocketHandlers(MagicMirrorApp.java:53) [kurento-magic-mirror.jar!/:6.1.1-SNAPSHOT]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration.registerWebSocketHandlers(DelegatingWebSocketConfiguration.java:51) ~[spring-websocket-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.web.socket.config.annotation.WebSocketConfigurationSupport.webSocketHandlerMapping(WebSocketConfigurationSupport.java:34) ~[spring-websocket-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration$$EnhancerBySpringCGLIB$$1d6a7f0d.CGLIB$webSocketHandlerMapping$2(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration$$EnhancerBySpringCGLIB$$1d6a7f0d$$FastClassBySpringCGLIB$$d69cc89c.invoke(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:318) ~[spring-context-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration$$EnhancerBySpringCGLIB$$1d6a7f0d.webSocketHandlerMapping(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_66-internal]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_66-internal]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_66-internal]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_66-internal]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.kurento.client.KurentoClient org.kurento.tutorial.magicmirror.MagicMirrorHandler.kurento; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kurentoClient' defined in org.kurento.tutorial.magicmirror.MagicMirrorApp: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:571) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 44 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'kurentoClient' defined in org.kurento.tutorial.magicmirror.MagicMirrorApp: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1145) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1069) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:967) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:543) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 46 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.kurento.client.KurentoClient]: Factory method 'kurentoClient' threw exception; nested exception is org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 58 common frames omitted
+Caused by: org.kurento.client.internal.NotEnoughResourcesException: An error occured in reserving the KMS - null
+	at de.fhg.fokus.nubomedia.kmc.KmsUrlProvider.reserveKms(KmsUrlProvider.java:52) ~[kurento-client-extended-1.0-SNAPSHOT.jar!/:1.0-SNAPSHOT]
+	at org.kurento.client.internal.KmsUrlLoader.loadKmsUrlFromProvider(KmsUrlLoader.java:39) ~[kurento-client-6.1.1-SNAPSHOT.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.client.internal.KmsUrlLoader.getKmsUrl(KmsUrlLoader.java:20) ~[kurento-client-6.1.1-SNAPSHOT.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.client.KurentoClient.getKmsUrl(KurentoClient.java:72) ~[kurento-client-6.1.1-SNAPSHOT.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.client.KurentoClient.create(KurentoClient.java:90) ~[kurento-client-6.1.1-SNAPSHOT.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.client.KurentoClient.create(KurentoClient.java:85) ~[kurento-client-6.1.1-SNAPSHOT.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp.kurentoClient(MagicMirrorApp.java:48) [kurento-magic-mirror.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp$$EnhancerBySpringCGLIB$$7ed479ca.CGLIB$kurentoClient$0(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:6.1.1-SNAPSHOT]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp$$EnhancerBySpringCGLIB$$7ed479ca$$FastClassBySpringCGLIB$$b50f311c.invoke(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:6.1.1-SNAPSHOT]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:318) ~[spring-context-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	at org.kurento.tutorial.magicmirror.MagicMirrorApp$$EnhancerBySpringCGLIB$$7ed479ca.kurentoClient(<generated>) ~[spring-core-4.2.1.RELEASE.jar!/:6.1.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_66-internal]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_66-internal]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_66-internal]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_66-internal]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.2.1.RELEASE.jar!/:4.2.1.RELEASE]
+	... 59 common frames omitted
