@@ -1,4 +1,4 @@
-FROM cmaiorano/nubo-base-image:1
+FROM cmaiorano/nubo-base-alternative:1
 
 MAINTAINER Nubomedia
 
