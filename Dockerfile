@@ -1,4 +1,4 @@
-FROM cmaiorano/nubo-base-alternative:1
+FROM nubomedia/apps-baseimage:v1
 
 MAINTAINER Nubomedia
 
