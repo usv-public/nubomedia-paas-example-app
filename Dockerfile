@@ -5,6 +5,9 @@ MAINTAINER Nubomedia
 RUN mkdir /tmp/magic-mirror
 ADD kurento-magic-mirror-6.1.1-SNAPSHOT.zip /tmp/magic-mirror/
 RUN cd /tmp/magic-mirror/ && unzip kurento-magic-mirror-6.1.1-SNAPSHOT.zip
+RUN id
+RUN ls -la ~/
+RUN whoami
 
 EXPOSE 8080 8888
 
