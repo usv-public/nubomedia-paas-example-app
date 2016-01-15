@@ -13,5 +13,5 @@ RUN pwd
 EXPOSE 8080 8888
 
 ##ENTRYPOINT pwd | java -Dapp.server.url=https://dl.dropboxusercontent.com/u/19675892 -jar /tmp/magic-mirror/lib/kurento-magic-mirror.jar
-ENTRYPOINT id && groups && ls -lah ~/.kurento && whoami
+ENTRYPOINT pwd && id && groups && ls -lah ~/.kurento && whoami
 
