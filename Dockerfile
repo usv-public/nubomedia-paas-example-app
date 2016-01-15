@@ -8,6 +8,7 @@ RUN cd /tmp/magic-mirror/ && unzip kurento-magic-mirror-6.1.1-SNAPSHOT.zip
 RUN id
 RUN ls -lah ~/.kurento
 RUN whoami
+RUN pwd
 
 EXPOSE 8080 8888
 
