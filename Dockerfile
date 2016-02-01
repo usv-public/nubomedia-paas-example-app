@@ -5,6 +5,7 @@ MAINTAINER NUBOMEDIA
 RUN mkdir /tmp/magic-mirror
 ADD kurento-magic-mirror-6.2.2-SNAPSHOT.zip /tmp/magic-mirror/
 RUN cd /tmp/magic-mirror/ && unzip kurento-magic-mirror-6.2.2-SNAPSHOT.zip
+ADD keystore.jks /
 
 EXPOSE 8080
 
